@@ -1,0 +1,10 @@
+{
+  "name": "himanshu-rajput-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Himanshu Rajput — Graphic Designer & Visual Artist",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "build": "echo 'Static site — no build needed'",
+    "start": "npx -y serve ."
+  }
+}

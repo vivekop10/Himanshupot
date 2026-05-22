@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Rajput — Graphic Designer & Visual Artist</title>
+    <meta name="description" content="Portfolio of Himanshu Rajput — a multidisciplinary Graphic Designer, VFX Artist, and 3D Visualizer specializing in print media, social media, and motion graphics.">
+    <meta name="keywords" content="Himanshu Rajput, Graphic Designer, VFX Artist, Portfolio, Photoshop, Illustrator, After Effects, Blender, Unreal Engine">
+    <meta name="author" content="Himanshu Rajput">
+    <meta property="og:title" content="Himanshu Rajput — Graphic Designer & Visual Artist">
+    <meta property="og:description" content="Multidisciplinary creative portfolio showcasing graphic design, VFX, and 3D visualization work.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <div class="loader-text">
+                <span class="loader-name">HIMANSHU RAJPUT</span>
+                <span class="loader-counter" id="loader-counter">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo">
+            <a href="#hero" class="logo-link" aria-label="Himanshu Rajput Home">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+                    <defs>
+                        <linearGradient id="logo-grad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#a78bfa" />
+                            <stop offset="50%" stop-color="#818cf8" />
+                            <stop offset="100%" stop-color="#c084fc" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="url(#logo-grad-nav)">
+                        <path d="M368.12,220.88c1.19-3.32,4.46-5.99,8.12-5.57,48.97.03,97.95-.03,146.92.03,5.52-.05,9.25,6.66,6.9,11.5-10.45,23.8-21.07,47.54-31.49,71.35-2.7,5.19,2.1,11.89,7.8,11.43,68.63.06,137.27.01,205.9.03,5.98-.31,10.27,6.78,7.48,12-18.27,41.33-36.62,82.63-54.93,123.95-.86,2.46-3.24,3.67-5.39,4.78-44.06.14-88.11.22-132.16.21-2.7-.13-5.84.52-8.02-1.5-3.1-2.15-4.36-6.48-2.84-9.94,10.53-23.77,21.06-47.56,31.62-71.32,3.35-5.5-1.19-13.41-7.76-12.54-73.39,0-146.78.04-220.16-.02-5.24-1.08-8.25-6.83-6.2-11.77,18.03-40.89,36.14-81.74,54.21-122.62Z"/>
+                        <path d="M612.51,225.28c2.17-5.41,7.78-9.39,13.69-9.06,11.01.37,21.97-.67,32.99-.46,98.03-.07,196.06.02,294.1,0,12.51-.32,25.2,2.01,36.47,7.57,8.98,4.6,16.79,12.16,20.21,21.8,3.36,9.26,2.49,19.26,2.43,28.92-2.47,16.69-11.63,31.8-23.65,43.4-23.49,22.2-55.61,31.99-86.83,37.07,12.84,28.52,25.37,57.18,38.1,85.74,2.19,4.25-.07,9.68-4.66,11.04-46.72.5-93.45-.08-140.16.33-5.72-.23-11.69.79-17.13-1.44-4.78-1.87-8.66-5.76-10.6-10.49-11.5-25.85-22.91-51.75-34.43-77.6-1.78-4.12-2.54-8.67-2.14-13.13,1.21-10.81,6.05-21.02,13-29.31,2.9-3.46,6.39-7.5,11.34-7.37,15.32-.03,30.64,0,45.96-.01,8.52-.11,17.18.6,25.53-1.49,11.85-3.24,22.71-11.19,28.18-22.34,2.48-5.32,4.01-11.8,1.25-17.32-3.3-6.57-10.91-9.49-17.8-10.36-30.11-.12-60.22-.03-90.33-.05-2.78,6.26-5.57,12.5-8.32,18.77-2.21,5.27-7.57,9.4-13.43,9.17-47.29-.05-94.58.11-141.87-.08,9.38-21.1,18.66-42.23,28.1-63.3Z"/>
+                        <path d="M299.07,382.87c3.43-3.49,8.34-5.21,13.18-5.19,50.67.02,101.34-.03,152.01.02-.56,2.27-1.54,4.39-2.5,6.51-8.42,19.01-16.84,38.01-25.22,57.03-2.77,6.27-9.39,10.56-16.26,10.39-50.94-.01-101.88.02-152.82-.02,8.36-19.62,17.24-39.03,25.77-58.58,1.64-3.54,2.92-7.43,5.84-10.16Z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#about" class="nav-link" data-index="01">About</a>
+            <a href="#expertise" class="nav-link" data-index="02">Expertise</a>
+            <a href="#work" class="nav-link" data-index="03">Work</a>
+            <a href="#experience" class="nav-link" data-index="04">Experience</a>
+            <a href="#contact" class="nav-link" data-index="05">Contact</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#about" class="mobile-link" data-index="01">About</a>
+            <a href="#expertise" class="mobile-link" data-index="02">Expertise</a>
+            <a href="#work" class="mobile-link" data-index="03">Work</a>
+            <a href="#experience" class="mobile-link" data-index="04">Experience</a>
+            <a href="#contact" class="mobile-link" data-index="05">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="tag-line"></span>
+                <span class="tag-text">GRAPHIC DESIGNER & VISUAL ARTIST</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line"><span class="title-word" data-animation="reveal">HIMANSHU</span></span>
+                <span class="title-line"><span class="title-word" data-animation="reveal">RAJPUT</span></span>
+            </h1>
+            <p class="hero-subtitle">Crafting visual stories through design, motion & 3D — transforming ideas into immersive experiences.</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary" id="hero-cta-work">
+                    <span>View Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="hero-cta-contact">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="21">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects Done</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Tools Mastered</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-index">01</span>
+                <h2 class="section-title" data-animation="split">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro reveal-text">I'm <strong>Himanshu Rajput</strong> — a multidisciplinary graphic designer and visual artist based in India, specializing in print media, social media design, motion graphics, and 3D visualization.</p>
+                    <p class="about-desc reveal-text">With a strong foundation from <strong>MAAC AGRA</strong> in high-end 3D Animation, VFX & Graphic Design, I bring a unique blend of artistic vision and technical precision to every project. From editorial layouts and book design to dynamic social media content, I create visuals that captivate and communicate.</p>
+                    <p class="about-desc reveal-text">My toolkit spans the entire Adobe Creative Suite, Blender, Maya, Nuke, and Unreal Engine — enabling me to craft everything from clean print designs to stunning 3D renders and visual effects.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="id-badge-container" id="about-card">
+                        <!-- Lanyard Strap -->
+                        <div class="lanyard">
+                            <div class="lanyard-strap"></div>
+                            <div class="lanyard-clip">
+                                <div class="clip-ring"></div>
+                                <div class="clip-body">
+                                    <div class="clip-hook"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3D ID Card -->
+                        <div class="id-card-3d" id="id-card-3d">
+                            <div class="id-card-inner" id="id-card-inner">
+                                <!-- FRONT FACE -->
+                                <div class="id-card-face id-card-front">
+                                    <!-- Holographic sheen overlay -->
+                                    <div class="id-holo-sheen" id="id-holo-sheen"></div>
+                                    <!-- Scan line effect -->
+                                    <div class="id-scanline"></div>
+
+                                    <!-- Top bar -->
+                                    <div class="id-topbar">
+                                        <div class="id-logo">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                                        </div>
+                                        <div class="id-org">// PORTFOLIO</div>
+                                    </div>
+
+                                    <!-- Avatar area with glitch -->
+                                    <div class="id-avatar-area">
+                                        <div class="id-avatar-glitch" id="id-avatar-glitch">
+                                            <!-- Real profile photo -->
+                                            <img src="assets/profile.png" alt="Himanshu Rajput" class="avatar-photo" id="avatar-photo">
+                                            <!-- Glitch slice lines -->
+                                            <div class="avatar-glitch-lines" id="avatar-glitch-lines"></div>
+                                        </div>
+                                        <div class="id-avatar-scanbar"></div>
+                                    </div>
+
+                                    <!-- Name & Info -->
+                                    <div class="id-main-info">
+                                        <h3 class="id-name">[Himanshu Rajput]</h3>
+                                        <p class="id-role">CREATIVE DESIGNER</p>
+                                    </div>
+
+                                    <!-- Stats row -->
+                                    <div class="id-stats-row">
+                                        <div class="id-stat-item">
+                                            <span class="id-stat-val">4+</span>
+                                            <span class="id-stat-key">YRS</span>
+                                        </div>
+                                        <div class="id-stat-divider"></div>
+                                        <div class="id-stat-item">
+                                            <span class="id-stat-val">21+</span>
+                                            <span class="id-stat-key">WORKS</span>
+                                        </div>
+                                        <div class="id-stat-divider"></div>
+                                        <div class="id-stat-item">
+                                            <span class="id-stat-val">8+</span>
+                                            <span class="id-stat-key">TOOLS</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom -->
+                                    <div class="id-bottom">
+                                        <div class="id-status">
+                                            <span class="id-status-dot"></span>
+                                            <span>AVAILABLE</span>
+                                        </div>
+                                        <div class="id-cursor-icon">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.29 5.89l7.71 16.71a1 1 0 001.84 0l2.42-5.7 5.7-2.42a1 1 0 000-1.84L3.29 5.89z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- Corner decorations -->
+                                    <div class="id-corner id-corner-tl"></div>
+                                    <div class="id-corner id-corner-tr"></div>
+                                    <div class="id-corner id-corner-bl"></div>
+                                    <div class="id-corner id-corner-br"></div>
+                                </div>
+
+                                <!-- BACK FACE -->
+                                <div class="id-card-face id-card-back">
+                                    <div class="id-back-pattern"></div>
+                                    <div class="id-back-content">
+                                        <div class="id-back-header">
+                                            <span class="id-back-label">// SYSTEM INFO</span>
+                                        </div>
+                                        <div class="id-back-details">
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">NAME</span>
+                                                <span class="id-back-value">Himanshu Rajput</span>
+                                            </div>
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">ROLE</span>
+                                                <span class="id-back-value">Graphic Designer</span>
+                                            </div>
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">ORG</span>
+                                                <span class="id-back-value">RK Publication</span>
+                                            </div>
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">EDU</span>
+                                                <span class="id-back-value">MAAC AGRA</span>
+                                            </div>
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">MAIL</span>
+                                                <span class="id-back-value id-back-email">himanshulodhi226@gmail.com</span>
+                                            </div>
+                                            <div class="id-back-row">
+                                                <span class="id-back-key">LOC</span>
+                                                <span class="id-back-value">India</span>
+                                            </div>
+                                        </div>
+                                        <div class="id-back-barcode">
+                                            <div class="barcode-bars" id="barcode-bars"></div>
+                                            <span class="barcode-text">HR-2026-CREATIVE-PASS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Flip instruction -->
+                            <div class="id-flip-hint" id="id-flip-hint">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                                <span>Click to flip</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="section expertise" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-index">02</span>
+                <h2 class="section-title" data-animation="split">Expertise</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="skill-card" data-skill="photoshop">
+                    <div class="skill-icon">
+                        <span>Ps</span>
+                    </div>
+                    <h3 class="skill-name">Photoshop</h3>
+                    <p class="skill-desc">Photo manipulation, compositing & digital art</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill-card" data-skill="illustrator">
+                    <div class="skill-icon">
+                        <span>Ai</span>
+                    </div>
+                    <h3 class="skill-name">Illustrator</h3>
+                    <p class="skill-desc">Vector graphics, logos & print layouts</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill-card" data-skill="aftereffects">
+                    <div class="skill-icon">
+                        <span>Ae</span>
+                    </div>
+                    <h3 class="skill-name">After Effects</h3>
+                    <p class="skill-desc">Motion graphics, VFX & compositing</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-card" data-skill="blender">
+                    <div class="skill-icon">
+                        <span>Bl</span>
+                    </div>
+                    <h3 class="skill-name">Blender</h3>
+                    <p class="skill-desc">3D modeling, rendering & animation</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-card" data-skill="premiere">
+                    <div class="skill-icon">
+                        <span>Pr</span>
+                    </div>
+                    <h3 class="skill-name">Premiere Pro</h3>
+                    <p class="skill-desc">Video editing & post-production</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill-card" data-skill="nuke">
+                    <div class="skill-icon">
+                        <span>Nk</span>
+                    </div>
+                    <h3 class="skill-name">Nuke</h3>
+                    <p class="skill-desc">Node-based VFX compositing</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-card" data-skill="maya">
+                    <div class="skill-icon">
+                        <span>Ma</span>
+                    </div>
+                    <h3 class="skill-name">Maya</h3>
+                    <p class="skill-desc">3D animation & character rigging</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                </div>
+                <div class="skill-card" data-skill="unreal">
+                    <div class="skill-icon">
+                        <span>UE</span>
+                    </div>
+                    <h3 class="skill-name">Unreal Engine</h3>
+                    <p class="skill-desc">Real-time 3D & virtual production</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>GRAPHIC DESIGN</span><span class="marquee-dot">✦</span>
+                <span>VISUAL EFFECTS</span><span class="marquee-dot">✦</span>
+                <span>3D ANIMATION</span><span class="marquee-dot">✦</span>
+                <span>MOTION GRAPHICS</span><span class="marquee-dot">✦</span>
+                <span>PRINT MEDIA</span><span class="marquee-dot">✦</span>
+                <span>VIDEO EDITING</span><span class="marquee-dot">✦</span>
+                <span>BOOK DESIGN</span><span class="marquee-dot">✦</span>
+                <span>SOCIAL MEDIA</span><span class="marquee-dot">✦</span>
+                <span>GRAPHIC DESIGN</span><span class="marquee-dot">✦</span>
+                <span>VISUAL EFFECTS</span><span class="marquee-dot">✦</span>
+                <span>3D ANIMATION</span><span class="marquee-dot">✦</span>
+                <span>MOTION GRAPHICS</span><span class="marquee-dot">✦</span>
+                <span>PRINT MEDIA</span><span class="marquee-dot">✦</span>
+                <span>VIDEO EDITING</span><span class="marquee-dot">✦</span>
+                <span>BOOK DESIGN</span><span class="marquee-dot">✦</span>
+                <span>SOCIAL MEDIA</span><span class="marquee-dot">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work / Portfolio Section -->
+    <section class="section work" id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-index">03</span>
+                <h2 class="section-title" data-animation="split">Selected Work</h2>
+                <p class="section-subtitle">A curated collection of graphic design, 3D visualization, and creative projects.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-bar" id="filter-bar">
+                <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                <button class="filter-btn" data-filter="branding" id="filter-branding">Branding</button>
+                <button class="filter-btn" data-filter="poster" id="filter-poster">Posters</button>
+                <button class="filter-btn" data-filter="product" id="filter-product">Product</button>
+                <button class="filter-btn" data-filter="3d" id="filter-3d">3D</button>
+                <button class="filter-btn" data-filter="food" id="filter-food">Food</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-index">04</span>
+                <h2 class="section-title" data-animation="split">Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-animation="slide-up">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 — Present</span>
+                        <h3 class="timeline-title">Graphic Designer</h3>
+                        <p class="timeline-company">RK Publication House</p>
+                        <p class="timeline-desc">Graphic Designer specializing in print media and book content design. Creating editorial layouts, cover designs, and publication-ready artwork.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Print Media</span>
+                            <span class="tag">Book Design</span>
+                            <span class="tag">Editorial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animation="slide-up">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 — 2026</span>
+                        <h3 class="timeline-title">Graphic Designer</h3>
+                        <p class="timeline-company">RK Publication House</p>
+                        <p class="timeline-desc">Designed book content, layouts, and print media materials for publications. Handled end-to-end design workflows from concept to print-ready files.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Print Media</span>
+                            <span class="tag">Content Design</span>
+                            <span class="tag">Layout</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animation="slide-up">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 — 2024</span>
+                        <h3 class="timeline-title">Graphic Designer & Video Editor</h3>
+                        <p class="timeline-company">Freelance — Social Media</p>
+                        <p class="timeline-desc">Created engaging social media graphics, promotional content, and video edits for various clients. Managed complete visual identity for social channels.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Freelance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-divider">
+                    <span>Education</span>
+                </div>
+                <div class="timeline-item" data-animation="slide-up">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot edu"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">MAAC AGRA</span>
+                        <h3 class="timeline-title">High-end 3D Animation, VFX & Graphic Design</h3>
+                        <p class="timeline-company">Maya Academy of Advanced Cinematics</p>
+                        <p class="timeline-desc">Comprehensive training in 3D animation, visual effects, compositing, and graphic design using industry-standard tools and workflows.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">3D Animation</span>
+                            <span class="tag">VFX</span>
+                            <span class="tag">Graphic Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-index">05</span>
+                <h2 class="section-title" data-animation="split">Let's Work<br>Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-intro">Have a project in mind? I'd love to hear about it. Let's create something incredible together.</p>
+                    <div class="contact-links">
+                        <a href="mailto:himanshulodhi226@gmail.com" class="contact-link" id="contact-email">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">himanshulodhi226@gmail.com</span>
+                            </div>
+                            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                        <a href="tel:+919238941962" class="contact-link" id="contact-phone">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">Phone</span>
+                                <span class="contact-link-value">+91 92389 41962</span>
+                            </div>
+                            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                        <a href="https://wa.me/919238941962" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-whatsapp">
+                            <div class="contact-link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">WhatsApp</span>
+                                <span class="contact-link-value">+91 92389 41962</span>
+                            </div>
+                            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-socials">
+                    <h3 class="socials-title">Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/himanshu_rajput_bro" target="_blank" rel="noopener noreferrer" class="social-link" id="social-instagram">
+                            <div class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <span>Instagram</span>
+                            <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/himanshu-lodhi-0004212b7" target="_blank" rel="noopener noreferrer" class="social-link" id="social-linkedin">
+                            <div class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            <span>LinkedIn</span>
+                            <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo" aria-label="Himanshu Rajput Logo">
+                        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+                            <defs>
+                                <linearGradient id="logo-grad-foot" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#a78bfa" />
+                                    <stop offset="50%" stop-color="#818cf8" />
+                                    <stop offset="100%" stop-color="#c084fc" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="url(#logo-grad-foot)">
+                                <path d="M368.12,220.88c1.19-3.32,4.46-5.99,8.12-5.57,48.97.03,97.95-.03,146.92.03,5.52-.05,9.25,6.66,6.9,11.5-10.45,23.8-21.07,47.54-31.49,71.35-2.7,5.19,2.1,11.89,7.8,11.43,68.63.06,137.27.01,205.9.03,5.98-.31,10.27,6.78,7.48,12-18.27,41.33-36.62,82.63-54.93,123.95-.86,2.46-3.24,3.67-5.39,4.78-44.06.14-88.11.22-132.16.21-2.7-.13-5.84.52-8.02-1.5-3.1-2.15-4.36-6.48-2.84-9.94,10.53-23.77,21.06-47.56,31.62-71.32,3.35-5.5-1.19-13.41-7.76-12.54-73.39,0-146.78.04-220.16-.02-5.24-1.08-8.25-6.83-6.2-11.77,18.03-40.89,36.14-81.74,54.21-122.62Z"/>
+                                <path d="M612.51,225.28c2.17-5.41,7.78-9.39,13.69-9.06,11.01.37,21.97-.67,32.99-.46,98.03-.07,196.06.02,294.1,0,12.51-.32,25.2,2.01,36.47,7.57,8.98,4.6,16.79,12.16,20.21,21.8,3.36,9.26,2.49,19.26,2.43,28.92-2.47,16.69-11.63,31.8-23.65,43.4-23.49,22.2-55.61,31.99-86.83,37.07,12.84,28.52,25.37,57.18,38.1,85.74,2.19,4.25-.07,9.68-4.66,11.04-46.72.5-93.45-.08-140.16.33-5.72-.23-11.69.79-17.13-1.44-4.78-1.87-8.66-5.76-10.6-10.49-11.5-25.85-22.91-51.75-34.43-77.6-1.78-4.12-2.54-8.67-2.14-13.13,1.21-10.81,6.05-21.02,13-29.31,2.9-3.46,6.39-7.5,11.34-7.37,15.32-.03,30.64,0,45.96-.01,8.52-.11,17.18.6,25.53-1.49,11.85-3.24,22.71-11.19,28.18-22.34,2.48-5.32,4.01-11.8,1.25-17.32-3.3-6.57-10.91-9.49-17.8-10.36-30.11-.12-60.22-.03-90.33-.05-2.78,6.26-5.57,12.5-8.32,18.77-2.21,5.27-7.57,9.4-13.43,9.17-47.29-.05-94.58.11-141.87-.08,9.38-21.1,18.66-42.23,28.1-63.3Z"/>
+                                <path d="M299.07,382.87c3.43-3.49,8.34-5.21,13.18-5.19,50.67.02,101.34-.03,152.01.02-.56,2.27-1.54,4.39-2.5,6.51-8.42,19.01-16.84,38.01-25.22,57.03-2.77,6.27-9.39,10.56-16.26,10.39-50.94-.01-101.88.02-152.82-.02,8.36-19.62,17.24-39.03,25.77-58.58,1.64-3.54,2.92-7.43,5.84-10.16Z"/>
+                            </g>
+                        </svg>
+                    </span>
+                    <p class="footer-tagline">Designing the future, one pixel at a time.</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-copyright">© 2026 Himanshu Rajput. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-category"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
